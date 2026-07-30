@@ -106,15 +106,22 @@ Rule-based 점수를 주 지표로, Logistic Regression 점수를 보조 지표�
 ## 📄 상세 자료
 
 - [프로젝트 정리본 (PDF)](./바나프레소_입지추천_프로젝트_정리본.pdf)
-- [개발 로그 (Notion)](https://www.notion.so/BrewMap-Development-Log-2ea589dece9f8051b657ff8323a35961)
+- [Team.UNIVERSE 노션 (Notion)](https://app.notion.com/p/UNIVERSE_PR-2ed2d46088e7803fbb92fb6e15ac397e?source=copy_link)
 
 ## 📁 프로젝트 구조
+```
 brewmap/
-├── crawlers/ # 직방 매물 크롤러 (Scrapy)
+├── crawlers/
+│   └── crawl_test/crawl_test/spiders/
+│       └── test_zigbang_csv.py          # 직방 매물 크롤러
 ├── dataAnal/
-│ ├── data/ # 공공데이터·크롤링·점수 산출 결과
-│ └── analysis/
-│ ├── BANA_final.ipynb # 최종 통합 분석 (Rule + ML + LLM)
-│ ├── rule_base_modeling.ipynb # Rule-based 점수화
-│ └── rule_base_ml_modeling.ipynb # Logistic Regression 점수화
-└── img/
+│   ├── data/
+│   │   ├── listing.csv                  # 직방 크롤링 매물 데이터
+│   │   ├── listing_scored_rule.csv      # Rule-based 점수 산출 결과
+│   │   ├── listing_scored_ml.csv        # ML 점수 산출 결과
+│   │   └── ...                          # 공공데이터 전처리 및 결과
+│   └── analysis/
+│       ├── BANA_final.ipynb             # 최종 분석 통합본 (Rule-based + ML + LLM)
+│       ├── rule_base_modeling.ipynb     # Rule-based 입지 점수화
+│       └── rule_base_ml_modeling.ipynb  # Logistic Regression 기반 점수화
+---
