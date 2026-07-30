@@ -5,6 +5,8 @@
 **팀원:** 김단하 · 김민정 · 조승아 (3인) &nbsp;|&nbsp; **기간:** 2026.01.19 ~ 2026.03.06 (약 7주)
 
 ---
+## 프로젝트 구조
+
 brewmap/
 ├── crawlers/
 │ └── crawl_test/crawl_test/spiders/
@@ -19,6 +21,7 @@ brewmap/
 │ ├── BANA_final.ipynb # 최종 분석 통합본 (Rule-based + ML + LLM)
 │ ├── rule_base_modeling.ipynb # Rule-based 입지 점수화
 │ └── rule_base_ml_modeling.ipynb # Logistic Regression 기반 점수화
+
 ---
 
 ## 활용 데이터
