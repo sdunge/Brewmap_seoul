@@ -6,14 +6,6 @@
 **팀원:** 김단하 · 김민정 · 조승아 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; **기간:** 2026.01.19 ~ 2026.03.06
 
 ---
-## 👤 나의 역할
-
-- **직방 매물 크롤링** — Scrapy로 상업용 매물 데이터(보증금·월세·면적·층수) 수집 (`crawlers/`)
-- **ML 점수화** — Logistic Regression 기반 매물 성공 가능성 점수화 (`rule_base_ml_modeling.ipynb`)
-- **LLM 해석** — OpenAI API로 추천 매물의 입지 장점·리스크를 자연어로 자동 생성
-- **공통 작업** — 공공데이터 수집·전처리·분석 (팀 공동 진행)
-
----
 ##  프로젝트 개요
 
 대부분의 예비 창업자는 데이터 분석 없이 직관과 경험에 의존해 입지를 결정한다. 본 프로젝트는 서울 내 바나프레소 기존 매장 데이터를 분석해 이상적인 입지 프로파일을 도출하고, 신규 매물을 점수화하여 최적 입점 후보지를 추천한다.
@@ -31,24 +23,30 @@
 | **How** | 공공데이터 5종 + 직방 크롤링 → Rule-based + ML 병행 점수화 → LLM 해석 |
 
 ---
+## 👤 나의 역할
+
+- **직방 매물 크롤링** — Scrapy로 상업용 매물 데이터(보증금·월세·면적·층수) 수집 (`crawlers/`)
+- **ML 점수화** — Logistic Regression 기반 매물 성공 가능성 점수화 (`rule_base_ml_modeling.ipynb`)
+- **LLM 해석** — OpenAI API로 추천 매물의 입지 장점·리스크를 자연어로 자동 생성
+- **공통 작업** — 공공데이터 수집·전처리·분석 (팀 공동 진행)
+
+---
 ## 프로젝트 구조
 
-```
 brewmap/
 ├── crawlers/
-│   └── crawl_test/crawl_test/spiders/
-│       └── test_zigbang_csv.py          # 직방 매물 크롤러
+│ └── crawl_test/crawl_test/spiders/
+│ └── test_zigbang_csv.py # 직방 매물 크롤러
 ├── dataAnal/
-│   ├── data/
-│   │   ├── listing.csv                  # 직방 크롤링 매물 데이터
-│   │   ├── listing_scored_rule.csv      # Rule-based 점수 산출 결과
-│   │   ├── listing_scored_ml.csv        # ML 점수 산출 결과
-│   │   └── ...                          # 공공데이터 전처리 및 결과
-│   └── analysis/
-│       ├── BANA_final.ipynb             # 최종 분석 통합본 (Rule-based + ML + LLM)
-│       ├── rule_base_modeling.ipynb     # Rule-based 입지 점수화
-│       └── rule_base_ml_modeling.ipynb  # Logistic Regression 기반 점수화
-```
+│ ├── data/
+│ │ ├── listing.csv # 직방 크롤링 매물 데이터
+│ │ ├── listing_scored_rule.csv # Rule-based 점수 산출 결과
+│ │ ├── listing_scored_ml.csv # ML 점수 산출 결과
+│ │ └── ... # 공공데이터 전처리 및 결과
+│ └── analysis/
+│ ├── BANA_final.ipynb # 최종 분석 통합본 (Rule-based + ML + LLM)
+│ ├── rule_base_modeling.ipynb # Rule-based 입지 점수화
+│ └── rule_base_ml_modeling.ipynb # Logistic Regression 기반 점수화
 
 ---
 
@@ -66,11 +64,7 @@ brewmap/
 ---
 
 ## 추천 결과
-
-```
 전체 매물 → [1차] recom_score 상위 50% 필터 → [2차] success_prob 내림차순 정렬 → TOP 20
-```
-
 <p align="center">
   <img src="img/result.png" width="100%" />
 </p>
@@ -107,6 +101,3 @@ brewmap/
 ## 📄 상세 자료
 
 - [프로젝트 정리본 (PDF)](./바나프레소_입지추천_프로젝트_정리본.pdf)
-- [Team.UNIVERSE 노션 (Notion)](https://app.notion.com/p/UNIVERSE_PR-2ed2d46088e7803fbb92fb6e15ac397e?source=copy_link)
-
-
