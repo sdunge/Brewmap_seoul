@@ -85,8 +85,6 @@ brewmap/
 
 ---
 
----
-
 ## ⚙️ 분석 방법 — 왜 이렇게 했나
 
 기준 매장이 63개(폐업 4개 포함)로 표본이 작아, ML 단독 예측은 과적합 위험이 있다고 판단했다. 그래서 정확한 예측 모델을 만들기보다 **입지 특성을 정량화하고 추천 구조를 설계하는 데 초점**을 두고, Rule-based 점수를 주 지표로, Logistic Regression 점수를 보조 지표로 병행했다.
@@ -103,6 +101,8 @@ brewmap/
 ## 🛠 기술 스택
 
 `Python` `Pandas` `Scrapy` `Scikit-learn (Logistic Regression)` `OpenAI API` `Jupyter`
+
+---
 
 ## 📄 상세 자료
 
